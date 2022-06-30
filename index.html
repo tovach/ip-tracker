@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<title>IP tracker</title>
+</head>
+
+<body>
+	<header class="header">
+  <div class="header__bg">
+    <img src="images/compressed/header/bg.png" alt="IP adress tracker">
+  </div>
+  <div class="container">
+    <div class="header__wrapper">
+      <h1 class="header__heading">IP adress tracker</h1>
+
+      <form class="header__form form">
+        <input class="form__input" type="text" name="formIp" required>
+        <button class="form__submit">
+          <img src="images/compressed/icons/search.svg" alt="">
+        </button>
+      </form>
+    </div>
+  </div>
+</header>
+	<div class="main">
+  <div class="container">
+    <div class="main__wrapper">
+      	<div class="main__info">
+          <div class="info">
+  <ul class="info__list">
+    <li class="info__item">
+      <h4 class="info__subtitle">ip adress</h4>
+      <h3 class="info__title" id="ip">👽</h3>
+    </li>
+    <li class="info__item">
+      <h4 class="info__subtitle">location</h4>
+      <h3 class="info__title" id="location">👽</h3>
+    </li>
+    <li class="info__item">
+      <h4 class="info__subtitle">Timezone</h4>
+      <h3 class="info__title" id="timezone">👽</h3>
+    </li>
+    <li class="info__item">
+      <h4 class="info__subtitle">isp</h4>
+      <h3 class="info__title" id="isp">👽</h3>
+    </li>
+  </ul>
+</div>
+        </div>
+    </div>
+  </div>
+  <div class="main__map">
+    <div class="map" id="map">
+</div>
+  </div>
+</div>
+	<script src="js/vendor.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>
