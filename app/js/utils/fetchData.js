@@ -7,7 +7,7 @@ const fetchData = async (url) => {
     "Access-Control-Allow-Origin": "*",
   });
   try {
-    const response = await fetch(url, { mode: "cors", headers });
+    const response = await fetch(url, { headers });
     if (response.ok) {
       return await response.json();
     } else {
