@@ -43,9 +43,10 @@ const setMap = (lat, lng, mapContainer = "") => {
   return map;
 };
 
-const getInfo = async (ip) => {
-  const getInfoUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=${ipifyAPIKey}&ipAddress=${ip}`;
+const getInfo = async (userIp = "") => {
+  const getInfoUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=${ipifyAPIKey}&ipAddress=${userIp}`;
   const {
+    ip,
     location: { country, city, lat, lng, timezone },
     isp,
   } = await fetchData(getInfoUrl);
@@ -71,9 +72,7 @@ const formHandler = (e) => {
 };
 
 const main = async () => {
-  const getIpUrl = "https://api.ipify.org?format=json";
-  const { ip: userIp } = await fetchData(getIpUrl);
-  const { ip, country, city, timezone, isp, lat, lng } = await getInfo(userIp);
+  const { ip, country, city, timezone, isp, lat, lng } = await getInfo();
   setInfo({ ip, country, city, timezone, isp });
   mapContainer = setMap(lat, lng);
 };
